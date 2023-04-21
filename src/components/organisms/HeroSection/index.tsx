@@ -1,9 +1,9 @@
 import ButtonComponent from '@/components/atoms/ButtonComponent';
 import PersonTitle from '@/components/atoms/PersonTitle';
 import { Flex, Text } from '@chakra-ui/react';
+import '@fontsource/poppins/800.css';
 import Image from 'next/image';
 import banner from '/public/images/banner.svg';
-import '@fontsource/poppins/800.css';
 
 export default function HeroSection() {
 	return (

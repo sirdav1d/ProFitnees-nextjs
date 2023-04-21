@@ -1,5 +1,4 @@
-import { Switch } from '@chakra-ui/react';
-import { useColorMode } from '@chakra-ui/react';
+import { Switch, useColorMode } from '@chakra-ui/react';
 
 export default function Switcher() {
 	const { colorMode, toggleColorMode } = useColorMode();

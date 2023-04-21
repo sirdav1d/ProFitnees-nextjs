@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
 				<meta
 					name='viewport'
 					content='width=device-width, initial-scale=1'
-				/>{' '}
+				/>
 				<meta
 					name='description'
 					content='Academia Fictícia criada com intuito de aprendizagem e treinamento em NextJS'

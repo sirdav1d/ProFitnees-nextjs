@@ -25,12 +25,13 @@ export default function DrawerMenu() {
 			</Button>
 
 			<Drawer
-      
 				isOpen={isOpen}
 				placement='right'
 				onClose={onClose}>
 				<DrawerOverlay />
-				<DrawerContent bgColor={bgColor} zIndex={999999999}>
+				<DrawerContent
+					bgColor={bgColor}
+					zIndex={999999999}>
 					<DrawerCloseButton />
 					<DrawerHeader>Navegue pelo Site</DrawerHeader>
 

@@ -16,7 +16,6 @@ export default function ServicesSection() {
 			flexDir={'column'}
 			m='0px auto'>
 			<PersonTitle
-	
 				key={'h2'}
 				text='Descubra nossos treinos personalizados'
 				size={'24px'}

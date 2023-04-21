@@ -1,13 +1,11 @@
-import { Flex, Heading, useColorModeValue } from '@chakra-ui/react';
-import React from 'react';
+import { Flex, Heading } from '@chakra-ui/react';
 
 export default function PersonTitle(props: {
 	text: string;
 	size: string;
 	color?: string;
-	spanSize?: string
+	spanSize?: string;
 }) {
-
 	return (
 		<Flex flexDir={'column'}>
 			<span

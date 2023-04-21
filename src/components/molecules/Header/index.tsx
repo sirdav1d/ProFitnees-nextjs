@@ -1,9 +1,9 @@
 import {
+	Image as ChakraImage,
 	Flex,
 	Link,
 	Stack,
 	useColorModeValue,
-	Image as ChakraImage,
 } from '@chakra-ui/react';
 import Image from 'next/image';
 
