@@ -18,6 +18,7 @@ export default function PersonTitle(props: {
 				}}
 			/>
 			<Heading
+			lineHeight={1.15}
 				color={props.color}
 				fontWeight={props.weight}
 				fontSize={props.size}>

@@ -45,6 +45,7 @@ export default function BenefitsSection() {
 				align={'center'}>
 				<ChakraImage
 					as={Image}
+					display={['none', 'none', 'none', 'flex']}
 					w='50%'
 					objectFit={'cover'}
 					borderRadius={'md'}
@@ -53,7 +54,7 @@ export default function BenefitsSection() {
 					alt='Mulheres Sorrindo na academia'
 				/>
 				<Flex
-					w='50%'
+					w={['100%', '100%', '100%', '50%']}
 					flexDir={'column'}
 					p='20px'
 					h='320px'
@@ -130,7 +131,7 @@ export default function BenefitsSection() {
 					</Flex>
 				</Flex>
 			</Flex>
-			<ButtonComponent>Começar agora</ButtonComponent>
+			<ButtonComponent margin={'40px'}>Começar agora</ButtonComponent>
 		</Flex>
 	);
 }

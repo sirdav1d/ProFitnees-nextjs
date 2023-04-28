@@ -8,7 +8,7 @@ import hipertrofia from '/public/images/hipertrofia.svg';
 
 export default function ServicesSection() {
 	const color = useColorModeValue('brand.neutral.900', 'brand.neutral.100');
-	
+
 	return (
 		<Flex
 			id='servicos'
@@ -21,13 +21,13 @@ export default function ServicesSection() {
 				spanSize='80px'
 				weight='800'
 				key={'h2'}
-				text='Descubra nossos treinos personalizados'
+				text='Conheça nossos treinos personalizados'
 				size={'28px'}
 				color={color}
 			/>
 			<Flex
 				w={'100%'}
-				maxW='1200px'
+				maxW={['368px', '368px', '480px', '1200px']}
 				align={'center'}
 				justify={'space-between'}
 				flexDir={['column', 'column', 'column', 'column', 'row']}>
@@ -56,7 +56,7 @@ export default function ServicesSection() {
 					}
 				/>
 			</Flex>
-			<ButtonComponent variant='primary'>Falar com instrutor</ButtonComponent>
+			<ButtonComponent margin='40px'>Falar com instrutor</ButtonComponent>
 		</Flex>
 	);
 }

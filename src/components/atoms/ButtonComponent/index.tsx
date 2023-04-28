@@ -5,12 +5,13 @@ export default function ButtonComponent(props: {
 	children?: ReactNode;
 	variant?: string;
 	onOpen?: () => void;
+	margin: string
 }) {
 	return (
 		<>
 			<Button
 				onClick={() => props.onOpen}
-				mt='40px'
+				mt= {props.margin}
 				fontWeight={'bold'}
 				maxW='max-content'
 				variant={props.variant ? props.variant : 'primary'}

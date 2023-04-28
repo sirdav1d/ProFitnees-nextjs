@@ -32,7 +32,7 @@ export default function HeroSection() {
 			<Flex
 				flexDir={'column'}
 				w={'100%'}
-				maxW='1200px'
+				maxW={['368px', '368px', '480px', '1200px']}
 				gap='4px'
 				align={'left'}>
 				<PersonTitle
@@ -49,7 +49,11 @@ export default function HeroSection() {
 					color={'brand.neutral.300'}>
 					Descubra do que você é capaz!
 				</Text>
-				<ButtonComponent key={'b1'}>Agendar Visita</ButtonComponent>
+				<ButtonComponent
+					key={'b1'}
+					margin={'40px'}>
+					Agendar Visita
+				</ButtonComponent>
 			</Flex>
 		</Flex>
 	);

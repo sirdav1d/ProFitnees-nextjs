@@ -27,8 +27,8 @@ export default function Header() {
 				p={'20px'}
 				bgColor={bgColor}>
 				<Flex
-					maxW='1200px'
 					w='100%'
+					maxW={['368px', '368px', '480px', '1200px']}
 					justify={'space-between'}>
 					<Link href='/'>
 						<ChakraImage
