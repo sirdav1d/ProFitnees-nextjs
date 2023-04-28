@@ -19,48 +19,64 @@ export default function CardComponent(props: {
 }) {
 	const color = useColorModeValue('brand.neutral.800', 'brand.neutral.300');
 	const colorTitle = useColorModeValue(
-		'brand.neutral.900',
-		'brand.neutral.100',
+		'brand.neutral.800',
+		'brand.neutral.300',
 	);
 
 	const colorCard = useColorModeValue('brand.neutral.300', 'brand.neutral.800');
 	return (
 		<>
 			<Card
-				shadow={'lg'}
+				shadow={'md'}
 				overflow={'hidden'}
+				border='2px solid'
+				borderColor='transparent'
 				transform={'auto'}
 				transition={'all, .3s ease'}
-				_hover={{ translateY: '-10px', shadow: 'dark-lg', scale: 1.05 }}
+				_hover={{
+					translateY: '-10px',
+					shadow: 'xl',
+					scale: 1.05,
+					borderColor: 'brand.yellow.500',
+				}}
 				bgColor={colorCard}
-				maxW='sm'
+				maxW='xs'
+				w={'100%'}
+				h='400px'
 				mt='40px'>
-				<CardBody p='0px'>
+				<CardBody
+					p='0px'
+					display={'flex'}
+					flexDir={'column'}
+					justifyContent={'space-between'}>
 					<ChakraImage
 						as={Image}
 						w='100%'
 						objectFit={'cover'}
-						h='250px'
+						h='168px'
+						transition={'all .3s ease'}
+						_hover={{ scale: 1.9 }}
 						src={props.image}
 						alt={props.name}
 					/>
 					<Flex
+						h='100%'
 						flexDir={'column'}
 						align={'center'}
-						p='20px'
+						p='16px 20px'
 						justify={'center'}>
-						<Stack
-							mt='2'
-							spacing='3'>
+						<Stack spacing='2'>
 							<Box m='0 auto'>
 								<PersonTitle
+									spanSize='40px'
+									weight='700'
 									size='20px'
 									text={props.title}
 									color={colorTitle}
 								/>
 							</Box>
 							<Text
-								fontSize={'16px'}
+								fontSize={'14px'}
 								color={color}>
 								{props.text}
 							</Text>

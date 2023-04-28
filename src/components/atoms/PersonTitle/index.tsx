@@ -5,12 +5,13 @@ export default function PersonTitle(props: {
 	size: string;
 	color?: string;
 	spanSize?: string;
+	weight: string;
 }) {
 	return (
 		<Flex flexDir={'column'}>
 			<span
 				style={{
-					width: '64px',
+					width: props.spanSize,
 					height: '8px',
 					backgroundColor: '#FBBA00',
 					borderRadius: '24px',
@@ -18,7 +19,7 @@ export default function PersonTitle(props: {
 			/>
 			<Heading
 				color={props.color}
-				fontWeight={'black'}
+				fontWeight={props.weight}
 				fontSize={props.size}>
 				{props.text}
 			</Heading>

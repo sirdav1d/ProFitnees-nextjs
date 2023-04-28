@@ -1,7 +1,6 @@
 import ButtonComponent from '@/components/atoms/ButtonComponent';
 import PersonTitle from '@/components/atoms/PersonTitle';
 import { Flex, Text } from '@chakra-ui/react';
-import '@fontsource/poppins/800.css';
 import Image from 'next/image';
 import banner from '/public/images/banner.svg';
 
@@ -12,7 +11,8 @@ export default function HeroSection() {
 			mt='60px'
 			height={'70vh'}
 			flexDir={'column'}
-			align={'left'}
+			p={'20px'}
+			align={'center'}
 			pos={'relative'}
 			backgroundColor={'rgba(0,0,0,0.6)'}
 			justify={'center'}>
@@ -31,16 +31,21 @@ export default function HeroSection() {
 
 			<Flex
 				flexDir={'column'}
+				w={'100%'}
+				maxW='1200px'
 				gap='4px'
-				p={['20px', '20px 40px', '20px 80px', '16px 180px']}>
+				align={'left'}>
 				<PersonTitle
+					weight='900'
 					key={'h1'}
 					text='Fortaleça seu corpo e sua mente'
-					size={'36px'}
+					size={'48px'}
+					spanSize='120px'
 					color={'brand.neutral.100'}
 				/>
 				<Text
-					fontSize={'20px'}
+					fontSize={'24px'}
+					fontWeight={'700'}
 					color={'brand.neutral.300'}>
 					Descubra do que você é capaz!
 				</Text>

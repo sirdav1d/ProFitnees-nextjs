@@ -46,7 +46,7 @@ export const theme = extendTheme({
 	styles: {
 		global: (props: StyleFunctionProps) => ({
 			'html, body, *': {
-				scrollMarginTop: '120px',
+				scrollMarginTop: '100px',
 				scrollBehavior: 'smooth',
 			},
 			body: {

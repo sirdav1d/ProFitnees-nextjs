@@ -8,21 +8,28 @@ import hipertrofia from '/public/images/hipertrofia.svg';
 
 export default function ServicesSection() {
 	const color = useColorModeValue('brand.neutral.900', 'brand.neutral.100');
+	
 	return (
 		<Flex
 			id='servicos'
-			p={['20px', '20px 40px', '20px 80px', '20px 180px']}
+			p={'20px'}
 			align={'center'}
 			flexDir={'column'}
+			w={'100%'}
 			m='0px auto'>
 			<PersonTitle
+				spanSize='80px'
+				weight='800'
 				key={'h2'}
 				text='Descubra nossos treinos personalizados'
-				size={'24px'}
+				size={'28px'}
 				color={color}
 			/>
 			<Flex
-				gap='24px'
+				w={'100%'}
+				maxW='1200px'
+				align={'center'}
+				justify={'space-between'}
 				flexDir={['column', 'column', 'column', 'column', 'row']}>
 				<CardComponent
 					image={hipertrofia}
