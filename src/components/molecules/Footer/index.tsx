@@ -5,10 +5,13 @@ import {
 	Link,
 	Text,
 	Image as ChakraImage,
+	useColorModeValue,
 } from '@chakra-ui/react';
-import logo from '../../../../public/logos/logoWhiteMode.svg';
+import logoW from '/public/logos/logoWhiteMode.svg';
+import logoD from '/public/logos/logoDarkMode.svg';
 import Image from 'next/image';
 export default function Footer() {
+	const logo = useColorModeValue(logoW, logoD)
 	return (
 		<Flex
 			flexDir={'column'}
@@ -21,7 +24,7 @@ export default function Footer() {
 				pos={'absolute'}
 				opacity={0.5}
 				display={['none', 'none', 'none', 'block']}
-				w='240px'
+				w='220px'
 				top='5%'
 				left='5%'
 				as={Image}
