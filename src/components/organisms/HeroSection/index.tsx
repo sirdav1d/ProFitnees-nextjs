@@ -1,6 +1,6 @@
 import ButtonComponent from '@/components/atoms/ButtonComponent';
 import PersonTitle from '@/components/atoms/PersonTitle';
-import { FadeAnimation } from '@/styles/animations';
+import { FadeAnimation, TextAnimation } from '@/styles/animations';
 import { Flex, Text } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -47,7 +47,7 @@ export default function HeroSection() {
 				/>
 				<Text
 					as={motion.p}
-					variants={FadeAnimation}
+					variants={TextAnimation}
 					whileInView='visible'
 					viewport={{ once: true }}
 					initial='hidden'

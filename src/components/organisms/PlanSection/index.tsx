@@ -58,7 +58,7 @@ export default function PlanSection() {
 						flexDir={'column'}>
 						<ChakraImage
 							as={Image}
-							h='100px'
+							h='92px'
 							src={Flashcircle}
 							alt='Flash Circulado'
 							filter={'auto'}
