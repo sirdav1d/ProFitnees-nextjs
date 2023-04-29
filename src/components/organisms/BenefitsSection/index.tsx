@@ -10,6 +10,8 @@ import '@fontsource/poppins';
 import Image from 'next/image';
 import { FiCheckCircle } from 'react-icons/fi';
 import Benefits from '/public/images/beneficios.svg';
+import { motion } from 'framer-motion';
+import { BenefitsAnimation } from '@/styles/animations';
 
 export default function BenefitsSection() {
 	const color = useColorModeValue('brand.neutral.900', 'brand.neutral.100');
@@ -33,7 +35,8 @@ export default function BenefitsSection() {
 				color={color}
 			/>
 			<Flex
-				mt='40px'
+				as={motion.div}
+				mt='60px'
 				bgColor={colorCard}
 				gap='24px'
 				borderRadius={'md'}
@@ -41,7 +44,10 @@ export default function BenefitsSection() {
 				transition={'all 0.3s ease'}
 				transform={'auto'}
 				shadow={'xl'}
-				_hover={{ shadow: '-24px 24px 0px #FBBA00', translateY: '-20px' }}
+				variants={BenefitsAnimation}
+				whileInView='end'
+				initial='start'
+				viewport={{ once: true, amount: 0.8 }}
 				align={'center'}>
 				<ChakraImage
 					as={Image}
@@ -56,25 +62,27 @@ export default function BenefitsSection() {
 				<Flex
 					w={['100%', '100%', '100%', '50%']}
 					flexDir={'column'}
-					p='20px'
+					p={['16px', '20px']}
 					h='320px'
 					justify={'space-between'}>
 					<Flex
 						align={'center'}
+						w='100%'
 						gap='12px'>
 						<FiCheckCircle
 							size={'20px'}
 							color='#FBBA00'
 						/>
 						<Text
-							fontSize={'md'}
+							fontSize={['sm', 'sm', 'md']}
 							color={colorText}
 							fontWeight={'semibold'}>
-							Variedade de equipamentos e atividades
+							Variedade de equipamentos
 						</Text>
 					</Flex>
 					<Flex
 						align={'center'}
+						w='100%'
 						gap='12px'>
 						<FiCheckCircle
 							size={'20px'}
@@ -82,14 +90,15 @@ export default function BenefitsSection() {
 						/>
 						<Text
 							color={colorText}
-							fontSize={'md'}
+							fontSize={['sm', 'sm', 'md']}
 							fontWeight={'semibold'}>
 							Flexibilidade de horários
 						</Text>
 					</Flex>
 					<Flex
 						align={'center'}
-						gap='12px'>
+						gap={'12px'}
+						w='100%'>
 						<FiCheckCircle
 							size={'20px'}
 							color='#FBBA00'
@@ -97,13 +106,14 @@ export default function BenefitsSection() {
 						<Text
 							color={colorText}
 							fontWeight={'semibold'}
-							fontSize={'md'}>
-							Acesso a treinadores e instrutores qualificados
+							fontSize={['sm', 'sm', 'md']}>
+							Acesso a instrutores qualificados
 						</Text>
 					</Flex>
 					<Flex
 						align={'center'}
-						gap='12px'>
+						w='100%'
+						gap={'12px'}>
 						<FiCheckCircle
 							size={'20px'}
 							color='#FBBA00'
@@ -111,13 +121,14 @@ export default function BenefitsSection() {
 						<Text
 							color={colorText}
 							fontWeight={'semibold'}
-							fontSize={'md'}>
+							fontSize={['sm', 'sm', 'md']}>
 							Ambiente seguro e motivador
 						</Text>
 					</Flex>
 					<Flex
 						align={'center'}
-						gap='12px'>
+						w='100%'
+						gap={'12px'}>
 						<FiCheckCircle
 							size={'20px'}
 							color='#FBBA00'
@@ -125,7 +136,7 @@ export default function BenefitsSection() {
 						<Text
 							color={colorText}
 							fontWeight={'semibold'}
-							fontSize={'md'}>
+							fontSize={['sm', 'sm', 'md']}>
 							Preços acessíveis
 						</Text>
 					</Flex>

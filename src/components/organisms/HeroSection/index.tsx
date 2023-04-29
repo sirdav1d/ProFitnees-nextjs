@@ -3,6 +3,8 @@ import PersonTitle from '@/components/atoms/PersonTitle';
 import { Flex, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import banner from '/public/images/banner.svg';
+import { motion } from 'framer-motion';
+import { FadeAnimation } from '@/styles/animations';
 
 export default function HeroSection() {
 	return (
@@ -44,6 +46,11 @@ export default function HeroSection() {
 					color={'brand.neutral.100'}
 				/>
 				<Text
+					as={motion.p}
+					variants={FadeAnimation}
+					whileInView='visible'
+					viewport={{ once: true }}
+					initial='hidden'
 					fontSize={'24px'}
 					fontWeight={'700'}
 					color={'brand.neutral.300'}>

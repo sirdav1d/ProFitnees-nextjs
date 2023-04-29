@@ -7,14 +7,15 @@ import {
 	Image as ChakraImage,
 	useColorModeValue,
 } from '@chakra-ui/react';
-import logoW from '/public/logos/logoWhiteMode.svg';
+
 import logoD from '/public/logos/logoDarkMode.svg';
 import Image from 'next/image';
 export default function Footer() {
-	const logo = useColorModeValue(logoW, logoD)
 	return (
 		<Flex
 			flexDir={'column'}
+			bgColor={'brand.neutral.800'}
+			color='brand.neutral.100'
 			p='24px'
 			align={'center'}
 			pos='relative'
@@ -22,13 +23,11 @@ export default function Footer() {
 			gap='20px'>
 			<ChakraImage
 				pos={'absolute'}
-				opacity={0.5}
+				opacity={0.1}
 				display={['none', 'none', 'none', 'block']}
-				w='220px'
-				top='5%'
-				left='5%'
+				w='840px'
 				as={Image}
-				src={logo}
+				src={logoD}
 			/>
 			<Flex>Redes Sociais</Flex>
 			<Divider />

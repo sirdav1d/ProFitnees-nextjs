@@ -15,6 +15,7 @@ import '@fontsource/poppins';
 
 export default function PlanSection() {
 	const color = useColorModeValue('brand.neutral.900', 'brand.neutral.100');
+	const bgColor = useColorModeValue('brand.yellow.300', 'brand.yellow.500');
 
 	return (
 		<>
@@ -126,13 +127,12 @@ export default function PlanSection() {
 			<Flex
 				flexDir={['column', 'column', 'column', 'row']}
 				id='contato'
-				bgColor={'brand.yellow.300'}
+				bgColor={bgColor}
 				p={['20px', '20px', '20px', '48px']}
 				w='100%'
 				align={'center'}
 				justify={'center'}
 				gap={['20px', '20px', '20px', '40px']}>
-				
 				<Input
 					bgColor={'brand.neutral.300'}
 					w='340px'

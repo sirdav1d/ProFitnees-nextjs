@@ -1,4 +1,6 @@
+import { FadeAnimation, GrowAnimation } from '@/styles/animations';
 import { Flex, Heading } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 
 export default function PersonTitle(props: {
 	text: string;
@@ -9,7 +11,11 @@ export default function PersonTitle(props: {
 }) {
 	return (
 		<Flex flexDir={'column'}>
-			<span
+			<motion.span
+				variants={GrowAnimation}
+				initial='hidden'
+				whileInView='visible'
+				viewport={{ once: true }}
 				style={{
 					width: props.spanSize,
 					height: '8px',
@@ -18,7 +24,12 @@ export default function PersonTitle(props: {
 				}}
 			/>
 			<Heading
-			lineHeight={1.15}
+				as={motion.h2}
+				variants={FadeAnimation}
+				viewport={{ once: true }}
+				initial='hidden'
+				whileInView='visible'
+				lineHeight={1.1}
 				color={props.color}
 				fontWeight={props.weight}
 				fontSize={props.size}>

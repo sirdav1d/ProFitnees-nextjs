@@ -10,6 +10,8 @@ import {
 	useColorModeValue,
 } from '@chakra-ui/react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { CardAnimation } from '@/styles/animations';
 
 export default function CardComponent(props: {
 	image: string;
@@ -27,6 +29,12 @@ export default function CardComponent(props: {
 	return (
 		<>
 			<Card
+				as={motion.div}
+				cursor={'pointer'}
+				variants={CardAnimation}
+				whileInView='visible'
+				initial='hidden'
+				viewport={{ once: true, amount:.3 }}
 				shadow={'md'}
 				overflow={'hidden'}
 				border='2px solid'
