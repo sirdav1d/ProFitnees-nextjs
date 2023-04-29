@@ -1,10 +1,10 @@
 import ButtonComponent from '@/components/atoms/ButtonComponent';
 import PersonTitle from '@/components/atoms/PersonTitle';
+import { FadeAnimation } from '@/styles/animations';
 import { Flex, Text } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import banner from '/public/images/banner.svg';
-import { motion } from 'framer-motion';
-import { FadeAnimation } from '@/styles/animations';
 
 export default function HeroSection() {
 	return (

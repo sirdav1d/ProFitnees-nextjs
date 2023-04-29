@@ -1,6 +1,6 @@
 import LinkComponent from '@/components/atoms/LinkComponent';
 import Switcher from '@/components/atoms/Switcher';
-import { Button, Flex } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 import { useState } from 'react';
 
 export default function Navigation(props: { display: 'column' | 'row' }) {

@@ -5,8 +5,6 @@ import { Flex, useColorModeValue } from '@chakra-ui/react';
 import fitDance from '/public/images/fitDance.svg';
 import funcional from '/public/images/funcional.svg';
 import hipertrofia from '/public/images/hipertrofia.svg';
-import { motion } from 'framer-motion';
-import { CardAnimation } from '@/styles/animations';
 
 export default function ServicesSection() {
 	const color = useColorModeValue('brand.neutral.900', 'brand.neutral.100');
@@ -28,7 +26,6 @@ export default function ServicesSection() {
 				color={color}
 			/>
 			<Flex
-			
 				w={'100%'}
 				maxW={['368px', '368px', '480px', '1200px']}
 				align={'center'}

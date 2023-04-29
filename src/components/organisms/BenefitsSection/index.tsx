@@ -1,17 +1,17 @@
+import ButtonComponent from '@/components/atoms/ButtonComponent';
 import PersonTitle from '@/components/atoms/PersonTitle';
+import { BenefitsAnimation } from '@/styles/animations';
 import {
 	Image as ChakraImage,
 	Flex,
 	Text,
 	useColorModeValue,
 } from '@chakra-ui/react';
-import ButtonComponent from '@/components/atoms/ButtonComponent';
 import '@fontsource/poppins';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { FiCheckCircle } from 'react-icons/fi';
 import Benefits from '/public/images/beneficios.svg';
-import { motion } from 'framer-motion';
-import { BenefitsAnimation } from '@/styles/animations';
 
 export default function BenefitsSection() {
 	const color = useColorModeValue('brand.neutral.900', 'brand.neutral.100');

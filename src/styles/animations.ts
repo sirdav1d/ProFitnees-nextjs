@@ -31,3 +31,14 @@ export const BenefitsAnimation = {
 		transition: { duration: 0.5, staggerChildren: 0.5, delayChildren: 0.5 },
 	},
 };
+
+export const IconAnimation = {
+	hidden: {
+		pathLength: 0,
+		fill: 'rgba(255, 255, 255, 0)',
+	},
+	visible: {
+		pathLength: 1,
+		fill: 'rgba(255, 255, 255, 1)',
+	},
+};

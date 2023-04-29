@@ -1,15 +1,14 @@
 import {
 	Button,
+	Image as ChakraImage,
 	Divider,
 	Flex,
 	Link,
 	Text,
-	Image as ChakraImage,
-	useColorModeValue,
 } from '@chakra-ui/react';
 
-import logoD from '/public/logos/logoDarkMode.svg';
 import Image from 'next/image';
+import logoD from '/public/logos/logoDarkMode.svg';
 export default function Footer() {
 	return (
 		<Flex

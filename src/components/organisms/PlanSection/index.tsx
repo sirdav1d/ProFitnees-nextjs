@@ -1,3 +1,4 @@
+import ButtonComponent from '@/components/atoms/ButtonComponent';
 import PersonTitle from '@/components/atoms/PersonTitle';
 import {
 	Image as ChakraImage,
@@ -6,7 +7,6 @@ import {
 	Text,
 	useColorModeValue,
 } from '@chakra-ui/react';
-import ButtonComponent from '@/components/atoms/ButtonComponent';
 import Image from 'next/image';
 import Flashcircle from '/public/icons/flashcircle.svg';
 import Flashy from '/public/icons/flashy.svg';
@@ -103,6 +103,7 @@ export default function PlanSection() {
 							dropShadow='0px 0px 12px #FBBA00'
 							alt='Flash Com Listras'
 						/>
+
 						<Flex
 							gap='12px'
 							flexDir={'column'}

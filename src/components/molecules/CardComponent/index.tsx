@@ -1,4 +1,5 @@
 import PersonTitle from '@/components/atoms/PersonTitle';
+import { CardAnimation } from '@/styles/animations';
 import {
 	Box,
 	Card,
@@ -9,9 +10,8 @@ import {
 	Text,
 	useColorModeValue,
 } from '@chakra-ui/react';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { CardAnimation } from '@/styles/animations';
+import Image from 'next/image';
 
 export default function CardComponent(props: {
 	image: string;
@@ -34,7 +34,7 @@ export default function CardComponent(props: {
 				variants={CardAnimation}
 				whileInView='visible'
 				initial='hidden'
-				viewport={{ once: true, amount:.3 }}
+				viewport={{ once: true, amount: 0.3 }}
 				shadow={'md'}
 				overflow={'hidden'}
 				border='2px solid'
