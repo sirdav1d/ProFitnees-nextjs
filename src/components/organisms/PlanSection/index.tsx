@@ -12,6 +12,8 @@ import Flashcircle from '/public/icons/flashcircle.svg';
 import Flashy from '/public/icons/flashy.svg';
 
 import '@fontsource/poppins';
+import { motion } from 'framer-motion';
+import { CardAnimation } from '@/styles/animations';
 
 export default function PlanSection() {
 	const color = useColorModeValue('brand.neutral.900', 'brand.neutral.100');
@@ -44,6 +46,11 @@ export default function PlanSection() {
 					w='100%'
 					mt='40px'>
 					<Flex
+						as={motion.div}
+						variants={CardAnimation}
+						whileInView={'visible'}
+						initial='hidden'
+						viewport={{ once: true, amount: 0.3 }}
 						borderRadius={'md'}
 						bgColor='brand.neutral.800'
 						color='brand.neutral.300'
@@ -51,14 +58,13 @@ export default function PlanSection() {
 						gap='24px'
 						maxW='300px'
 						w='100%'
-						pos='relative'
-						h='360px'
+						h='348px'
 						align={'center'}
-						justify={'center'}
+						justify={'space-between'}
 						flexDir={'column'}>
 						<ChakraImage
 							as={Image}
-							h='92px'
+							h='98px'
 							src={Flashcircle}
 							alt='Flash Circulado'
 							filter={'auto'}
@@ -69,7 +75,7 @@ export default function PlanSection() {
 							gap='12px'
 							flexDir={'column'}
 							align={'center'}
-							h='100%'
+							h='50%%'
 							justify={'space-between'}>
 							<PersonTitle
 								text={'Plano Standard'}
@@ -85,6 +91,11 @@ export default function PlanSection() {
 						</Flex>
 					</Flex>
 					<Flex
+						as={motion.div}
+						variants={CardAnimation}
+						whileInView={'visible'}
+						initial='hidden'
+						viewport={{ once: true, amount: 0.3 }}
 						borderRadius={'md'}
 						bgColor='brand.neutral.800'
 						color='brand.neutral.300'
@@ -92,26 +103,27 @@ export default function PlanSection() {
 						gap='24px'
 						maxW='300px'
 						w='100%'
-						h='360px'
+						h='348px'
 						align={'center'}
+						justify={'space-between'}
 						flexDir={'column'}>
 						<ChakraImage
 							as={Image}
 							h='80px'
-							filter={'auto'}
 							src={Flashy}
+							alt='Flash Circulado'
+							filter={'auto'}
+							transform={'auto'}
 							dropShadow='0px 0px 12px #FBBA00'
-							alt='Flash Com Listras'
 						/>
-
 						<Flex
 							gap='12px'
 							flexDir={'column'}
 							align={'center'}
-							h='100%'
+							h='50%%'
 							justify={'space-between'}>
 							<PersonTitle
-								text={'Plano Premium'}
+								text={'Plano Standard'}
 								size={'24px'}
 								weight={'semibold'}
 								spanSize='40px'
