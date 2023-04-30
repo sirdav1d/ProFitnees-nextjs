@@ -11,10 +11,10 @@ export default function HeroSection() {
 		<Flex
 			id='inicio'
 			mt='60px'
-			height={'70vh'}
 			flexDir={'column'}
 			p={'20px'}
 			align={'center'}
+			h='100vh'
 			pos={'relative'}
 			backgroundColor={'rgba(0,0,0,0.6)'}
 			justify={'center'}>

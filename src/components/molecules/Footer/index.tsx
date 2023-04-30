@@ -1,4 +1,5 @@
 import {
+	Box,
 	Button,
 	Image as ChakraImage,
 	Divider,
@@ -9,6 +10,13 @@ import {
 
 import Image from 'next/image';
 import logoD from '/public/logos/logoDarkMode.svg';
+import {
+	FaFacebookSquare,
+	FaTwitterSquare,
+	FaWhatsappSquare,
+	FaInstagramSquare,
+} from 'react-icons/fa';
+
 export default function Footer() {
 	return (
 		<Flex
@@ -28,7 +36,20 @@ export default function Footer() {
 				as={Image}
 				src={logoD}
 			/>
-			<Flex>Redes Sociais</Flex>
+			<Flex gap='28px'>
+				<Box color={'brand.yellow.500'}>
+					<FaFacebookSquare size={36} cursor={'pointer'}/>
+				</Box>
+				<Box color={'brand.yellow.500'}>
+					<FaTwitterSquare size={36} />
+				</Box>
+				<Box color={'brand.yellow.500'}>
+					<FaWhatsappSquare size={36} />
+				</Box>
+				<Box color={'brand.yellow.500'}>
+					<FaInstagramSquare size={36} />
+				</Box>
+			</Flex>
 			<Divider />
 			<Flex
 				gap='12px'
